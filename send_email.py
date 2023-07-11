@@ -21,7 +21,7 @@ def send_email(email, topic, message):
 Subject: New email from {email}
 
 From: {email}
-Topic: {topic}
+Topic {topic}
 {message}
 """
 
