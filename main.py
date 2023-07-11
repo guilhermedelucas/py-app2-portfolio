@@ -15,3 +15,7 @@ with col2:
     2017 started my first developer job at Dots. Now I am looking to expand my 
     career and learn about Machine Learning and AI"""
     st.write(content)
+
+
+content2 = """Bellow you can find some of the apps I have built in Python. Feel free to contact me!"""
+st.write(content2)
