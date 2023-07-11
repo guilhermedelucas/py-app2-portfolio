@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas
+from send_email import send_email
 
 
 df = pandas.read_csv('pages/topics.csv')
@@ -13,4 +14,4 @@ with st.form(key='contact_us'):
     button = st.form_submit_button('Send')
 
     if button:
-        st.write(f"{email}, {topic}, {message}")
+        send_email(email=email, topic=topic, message=message)
