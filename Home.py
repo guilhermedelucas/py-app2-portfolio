@@ -1,7 +1,10 @@
 import streamlit as st
 import pandas
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    layout="wide",
+    page_title="Pyrtfolio apps"
+)
 
 col1, col2 = st.columns(2)
 
@@ -24,13 +27,13 @@ st.write(content2)
 col3, emptycol, col4 = st.columns([1.5, 0.5, 1.5])
 
 
-df = pandas.read_csv('data.csv', sep=";")
+df = pandas.read_csv('apps.csv', sep=";")
 
 
 def display_app(row_local):
     st.header(row_local['title'])
     st.write(row_local['description'])
-    st.image(f"images/{row_local['image']}")
+    st.image(f"images/apps/{row_local['image']}")
     st.write(f"[Source_code]({row_local['url']})")
 
 
