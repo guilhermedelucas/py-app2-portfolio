@@ -2,7 +2,6 @@ import streamlit as st
 import pandas
 from send_email import send_email
 
-
 df = pandas.read_csv('pages/topics.csv')
 
 select_options = [row['topic'] for i, row in df.iterrows()]
@@ -15,3 +14,4 @@ with st.form(key='contact_us'):
 
     if button:
         send_email(email=email, topic=topic, message=message)
+        st.info('Your email was sent')
